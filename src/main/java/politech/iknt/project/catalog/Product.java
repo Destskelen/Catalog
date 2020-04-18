@@ -1,6 +1,6 @@
 package politech.iknt.project.catalog;
 
-class Product {
+public class Product {
     String name;  // Название продукта
     int id;       // Код продукта
     double price; // Цена

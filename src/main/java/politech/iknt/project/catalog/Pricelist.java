@@ -2,9 +2,26 @@ package politech.iknt.project.catalog;
 
 import java.util.ArrayList;
 
-class  Pricelist extends ArrayList<Product>{
+public class  Pricelist extends ArrayList<Product>{
 
-    protected int findId(int id) {
+    public boolean addProduct(Product product) {
+        if ((this.findName(product.name) != -1) || (this.findId(product.id) != -1)) return false;
+        this.add(product);
+        return true;
+    }
+
+    public int findName(String n) {
+        int result = -1;
+        for (int i = 0; i < this.size(); i++){
+            if (this.get(i).name.equals(n)) {
+                result = this.get(i).id;
+                break;
+            }
+        }
+        return result;
+    }
+
+    private int findId(int id) {
         int result = -1;
         for (int i = 0; i < this.size(); i++){
             if (this.get(i).id == id) {
