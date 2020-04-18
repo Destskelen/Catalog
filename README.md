@@ -54,6 +54,17 @@ public int removeId(int id)
 public double amount(int id, int number)
 ```
 
+```
+Внести продукт в список товаров:
+
+public boolean addProduct(Product product)
+```
+
+```
+Поиск товара в списке по его имени:
+public int findName(String n)
+```
+
 ## Общие свойства методов Pricelist
 ```
 Возвращаемые данные:
